@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/svg">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <title>Quiz Expert</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Teste seus conhecimentos</h1>
+      <p>Esse é um quiz criado utilizando HTML, CSS e JavaScript. As perguntas e respostas podem ser alteradas diretamente no código.</p>
+    </header>
+
+    <div id="quiz"></div>
+
+    <template>
+      <div class="quiz-item">
+        <h3>
+          Pergunta 01
+        </h3>
+        <dl>
+          <dt>
+            <input type="radio" name="item" value="0">
+            <span>
+              Resposta A
+            </span>
+          </dt>
+        </dl>
+      </div>
+    </template>
+
+    <div id="acertos" style="display:none;">
+      <strong>Acertos</strong>
+      <span>0 de 10</span>
+    </div>
+
+    <button id="enviar">Enviar</button> <!-- Botão Enviar -->]
+    <button id="reiniciar" style="display:none;">Reiniciar</button> <!-- Botão Reiniciar -->
+
+
+    <footer>
+      <img src="./assets/logo.svg" alt="Logo fmota" height="38px" width="100px">
+      <p>criado por @fmota.dev</p>
+    </footer>
+  </main>
+
+</body>
+
+</html>
