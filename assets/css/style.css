@@ -142,6 +142,10 @@ input:checked:before {
   padding: 12px;
 }
 
+#reiniciar {
+  display: none;
+}
+
 #enviar,
 #reiniciar {
   margin-top: 20px;
