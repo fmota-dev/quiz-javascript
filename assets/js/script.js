@@ -127,8 +127,7 @@ for (const item of questoes) {
 	quiz.appendChild(quizItem);
 }
 
-// Adiciona evento de clique para o botão "Enviar"
-enviarButton.addEventListener('click', () => {
+function verificarRespostas() {
 	// Verificar se todas as questoes foram respondidas
 	const perguntasRespondidas =
 		document.querySelectorAll('input:checked').length;
@@ -158,10 +157,9 @@ enviarButton.addEventListener('click', () => {
 	// Mostrar o contêiner de acertos e o botão de reiniciar
 	acertosContainer.style.display = 'block';
 	reiniciarButton.style.display = 'inline';
-});
+}
 
-// Adiciona evento de clique para o botão "Reiniciar"
-reiniciarButton.addEventListener('click', () => {
+function resetarRespostas() {
 	// Limpar seleções
 	const respostasSelecionadas = document.querySelectorAll('input:checked');
 	respostasSelecionadas.forEach((resposta) => {
@@ -170,9 +168,14 @@ reiniciarButton.addEventListener('click', () => {
 
 	// Resetar contagem de acertos
 	corretas.clear();
-	mostrarTotal.textContent = '0 de ' + totalDePerguntas;
 
 	// Ocultar contêiner de acertos e botão de reiniciar
 	acertosContainer.style.display = 'none';
 	reiniciarButton.style.display = 'none';
-});
+}
+
+// Adiciona evento de clique para o botão "Enviar"
+enviarButton.addEventListener('click', verificarRespostas);
+
+// Adiciona evento de clique para o botão "Reiniciar"
+reiniciarButton.addEventListener('click', resetarRespostas);
