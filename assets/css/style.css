@@ -131,6 +131,7 @@ input:checked:before {
 }
 
 #acertos {
+  display: none;
   text-align: center;
   background-color: #a3e635;
 
